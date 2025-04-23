@@ -97,11 +97,11 @@ const minimax = (board, depth, isMaximizingPlayer) => {
 
 // App component
 function App() {
+  const [showPopup, setShowPopup] = useState(true);
   const [board, setBoard] = useState(Array(SIZE).fill().map(() => Array(SIZE).fill(' ')));
   const [isPlayerTurn, setIsPlayerTurn] = useState(true); // true for player, false for AI
   const [gameStatus, setGameStatus] = useState(''); // 'win', 'draw', or '' (ongoing)
   const [winner, setWinner] = useState(null);
-  const [showPopup, setShowPopup] = useState(true);
 
   // Function to handle a click on a box
   const handleCellClick = (row, col) => {
@@ -138,15 +138,15 @@ function App() {
     setGameStatus('');
   };
   
-  {showPopup && (
-    <div className="popup">
-      <div className="popup-content">
-        <h2>You wanna try beating AI?</h2>
-        <p>Go ahead and play!</p>
-        <button onClick={() => setShowPopup(false)}>Let's Go!</button>
-      </div>
-    </div>
-  )}
+  // {showPopup && (
+  //   <div className="popup">
+  //     <div className="popup-content">
+  //       <h2>You wanna try beating AI?</h2>
+  //       <p>Go ahead and play!</p>
+  //       <button onClick={() => setShowPopup(false)}>Let's Go!</button>
+  //     </div>
+  //   </div>
+  // )}
   
 
   // Function to render the board
@@ -187,6 +187,7 @@ function App() {
   }, [board]); // Runs whenever the board changes
 
   return (
+    
     <div className="App">
       <h1>Tic-Tac-Toe Game</h1>
 
@@ -197,7 +198,7 @@ function App() {
 
       {/* Render the board */}
       <div className="board">{renderBoard()}</div>
-      {winner && (
+      {/* {winner && (
   <>
     {winner === 'O' && (
       <div className="glitch" data-text="You can't defeat AI. Try harder!">
@@ -213,8 +214,35 @@ function App() {
       Play Again
     </button>
   </>
+)} */}
+{gameStatus && (
+  <div className="result-section">
+    {winner === 'O' && (
+      <div className="glitch" data-text="You can't defeat AI. Try harder!">
+        You can't defeat AI. Try harder!
+      </div>
+    )}
+    {winner === 'X' && <h2 className="result-msg">You Win!</h2>}
+    {winner === 'D' && <h2 className="result-msg">It's a Draw!</h2>}
+
+    <div className="play-again-container">
+      <button className="play-again" onClick={resetGame}>
+        Play Again
+      </button>
+    </div>
+  </div>
 )}
 
+
+{showPopup && (
+  <div className="popup">
+    <div className="popup-content">
+      <h2>You wanna try beating AI?</h2>
+      <p>Go ahead and play!</p>
+      <button onClick={() => setShowPopup(false)}>Let's Go!</button>
+    </div>
+  </div>
+)}
 
 
       {/* Play Again Button */}
