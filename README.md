@@ -7,9 +7,9 @@
 
 An elegant, modern implementation of the classic Tic-Tac-Toe game built with React and powered by an unbeatable AI using the Min-Max algorithm.
 
-![Game Screenshot]<img src="../assets/ss1.png" width="500">
+<img src="../assets/ss2.png" width="500">
+<img src="../assets/ss1.png" width="500">
 
-![Game Screenshot](../tic-tac-toe-react/assets/ss1.png)
 
 ## ✨ Features
 
