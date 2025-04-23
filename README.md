@@ -7,7 +7,8 @@
 
 An elegant, modern implementation of the classic Tic-Tac-Toe game built with React and powered by an unbeatable AI using the Min-Max algorithm.
 
-![Game Screenshot](./screenshot.png)
+![Game Screenshot](../assets/ss1.png)
+![Game Screenshot](../assets/ss2.png)
 
 ## ✨ Features
 
@@ -19,7 +20,7 @@ An elegant, modern implementation of the classic Tic-Tac-Toe game built with Rea
 
 ## 🚀 Live Demo
 
-[Play the game online!](https://your-username.github.io/tic-tac-toe-ai/) *(Update with your actual deployment link)*
+[Play the game online!](https://VEDLESS.github.io/tic-tac-toe-ai.git/) 
 
 ## 🛠️ Tech Stack
 
@@ -69,7 +70,7 @@ tic-tac-toe-ai/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/tic-tac-toe-ai.git
+   git clone https://github.com/VEDLESS/tic-tac-toe-ai.git
    cd tic-tac-toe-ai
    ```
 
@@ -134,7 +135,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 👨‍💻 Author
 
-Created with ❤️ by [Your Name](https://github.com/your-username)
+Created with ❤️ by [VEDLESS](https://github.com/VEDLESS)
 
 ---
 
